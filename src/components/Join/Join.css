@@ -1,0 +1,102 @@
+#joinContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%; /* Increase the width of the container */
+    max-width: 1200px; /* Optional: Set a max-width for very large screens */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+#inputContainer {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #161616; /* Dark background for the input container */
+    padding: 30px; /* Increased padding for more space */
+    border-radius: 25px; /* More pronounced rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for modern look */
+}
+
+#inputContainer > * {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#inputContainer label {
+    color: #a0a0a0; /* Light gray color for labels */
+    font-size: 1rem; /* Adjust the font size if needed */
+    margin-bottom: 5px; /* Space between label and input field */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Make label span full width */
+}
+
+#brand {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 3rem; /* Larger font size for better visibility */
+    margin-bottom: 20px;
+    color: #D0D1D0; /* Modern and light color */
+}
+
+#createCallBtn, #joinCallBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 24px; /* Added horizontal padding for more button size */
+    border: none;
+    border-radius: 25px; /* More rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#createCallBtn:hover, #joinCallBtn:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd !important;
+    color: #777;
+    cursor: not-allowed;
+}
+
+.MuiInput-underline:after {
+    border-bottom: 2px solid #4CAF50 !important;
+}
+
+input, .MuiCheckbox-root {
+    color: #fff !important; /* White color for input text */
+    background-color: #232223 !important; /* Dark background for input fields */
+    border-radius: 20px; /* Rounded corners for input fields */
+}
+
+/* Media Query for Responsive Design */
+@media only screen and (max-width: 600px) {
+    #joinContainer {
+        flex-direction: column;
+    }
+
+    #inputContainer {
+        width: 100%;
+        margin-top: 0;
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    #brand {
+        font-size: 2rem; /* Smaller font size on mobile */
+    }
+}
+
+#howToLink {
+    color: #D0D1D0; /* Food color for "How it works?" */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#howToLink:hover {
+    text-decoration: underline;
+}

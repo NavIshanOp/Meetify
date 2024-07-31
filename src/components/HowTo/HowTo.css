@@ -1,0 +1,12 @@
+/* HowTo.css */
+
+#instructionContainer {
+    text-align: justify;
+    margin-bottom: 50px;
+    color: #00BCD4; /* Cyan color for the text */
+}
+
+#instructionContainer li {
+    padding-bottom: 10px;
+    color: #00BCD4; /* Cyan color for list items */
+}

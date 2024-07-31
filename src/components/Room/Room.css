@@ -1,0 +1,175 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Responsive Video Elements */
+.video-responsive {
+  max-height: 100vh;
+  max-width: 100vw;
+  object-fit: cover;
+}
+
+
+#shareVideo {
+  background: black;
+  height: 85vh; /* Adjusted for better viewing on devices */
+  width: auto;
+  border: 2px solid white;
+  max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+/* Video Container Improvements */
+#videoContainer {
+  height: auto; /* Adjust for different screen sizes */
+  width: 100%; /* Full width on mobile */
+  flex-direction: column;
+  justify-content: center; /* Center the videos */
+  align-items: center; /* Align items for smaller screens */
+}
+
+#videoContainer video {
+  background: #2c3e50;
+  height: 20vh;
+  width: 100%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.videos {
+  display: flex;
+  position: relative;
+  background-color: ;
+}
+
+.videos .action {
+  position: absolute;
+  width: 100%;
+  bottom: 9px;
+  visibility: hidden;
+}
+.videos .name {
+  position: absolute;
+  width: fit-content;
+  top: 0;
+  left: 0;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 20px;
+  padding: 5px;
+  font-size: small;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.videos .name > * {
+  margin-right: 3px;
+}
+.videos:hover .action {
+  visibility: visible;
+}
+
+#clipboard {
+  opacity: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+#shareContainer {
+  flex-grow: 1; /* Takes up as much space as possible */
+  height: 100%;
+}
+
+#videoContainer {
+  flex-grow: 1; /* Allow this to expand to fill remaining space */
+  display: flex; /* Use flexbox to manage videos */
+  flex-wrap: wrap; /* Wrap videos */
+  align-content: flex-start; /* Align content to the top */
+  overflow-y: auto; /* In case of overflow, allow scroll */
+}
+
+.video { /* Individual videos */
+  flex: 1 1 20%; /* Adjust basis to 20% - can change based on number of videos */
+  max-width: 20%; /* Each video takes up to 20% of the width */
+  border: 1px solid #ddd; /* Just for visibility */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.standalone #videoContainer video {
+  width: 50vw;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.standalone #videoContainer {
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.standalone .videos {
+  width: 50vw;
+  height: 50vh;
+  position: relative;
+}
+
+#standalone_share {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 75px;
+}
+
+#roomContainer {
+  display: flex;
+  flex-direction: row; /* side by side layout */
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  #videoContainer {
+    height: 80vh;
+    width: 15vw; /* Smaller width on larger screens */
+    flex-direction: column;
+    justify-content: flex-start; /* Align to start for desktop view */
+  }
+}
+
+/* Mobile Video Adjustments */
+@media screen and (max-width: 767px) {
+  .videos video {
+    width: 90vw; /* Adjust video width for mobile */
+    height: auto; /* Adjust height accordingly */
+    margin-bottom: 10px; /* Space between videos */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #roomContainer {
+    flex-direction: column;
+  }
+  .video {
+    max-width: 100%; /* Full width videos on smaller screens */
+  }
+}
+
+/* Stop Screen Share Button */
+.button-stop-share {
+  padding: 10px 20px;
+  position: fixed; /* Fixed at the bottom or as needed */
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  z-index: 10; /* Ensure it's above other elements */
+  background-color: red; /* Red for visibility, change as per design */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
