@@ -21,7 +21,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine. You
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/meetify.git
+    git clone https://github.com/NavIshanOp/meetify.git
     cd meetify
     ```
 
